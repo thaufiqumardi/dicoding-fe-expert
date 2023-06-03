@@ -1,0 +1,75 @@
+@media only screen and (max-width: 425px) {
+  .nav__bar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav__home {
+    margin: auto;
+  }
+
+  .nav__menu {
+    display: none;
+  }
+
+  #hamburger {
+    display: block;
+    font-size: 20px;
+    color: var(--black);
+    border: unset;
+    padding: 18px;
+  }
+
+  #drawer {
+    display: block;
+  }
+
+  /* HERO */
+
+  .hero {
+    width: 100%;
+    min-height: 280px;
+    background-size: cover;
+  }
+
+  .hero__inner {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+  }
+
+  h1.hero__title {
+    color: var(--white);
+    font-size: 1.8rem;
+  }
+
+  .hero__tagline {
+    font-size: .8rem;
+  }
+
+  /* Content */
+  .content {
+    padding: 0;
+  }
+
+  .content__body {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 8px;
+  }
+
+
+  .content__header h2 {
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+  }
+
+  .content__header p {
+    font-size: .8rem;
+  }
+
+  /* Card */
+  .card img {
+    height: 120px;
+  }
+}

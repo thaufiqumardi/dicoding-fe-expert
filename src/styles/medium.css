@@ -1,0 +1,41 @@
+@media only screen and (max-width: 768px) {
+  .nav__home {
+    margin: auto;
+  }
+
+  /* Hero */
+
+  .hero {
+    width: 100%;
+    min-height: 280px;
+    min-width: 100%;
+  }
+
+  .hero__inner {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+  }
+
+  h1.hero__title {
+    color: var(--white);
+    font-size: 1.4rem;
+  }
+
+  .hero__tagline {
+    font-size: .8rem;
+  }
+
+  /* Content */
+  .content__body {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 8px;
+  }
+
+  /* Card */
+  .card__image__container img {
+    height: 130px;
+    object-fit: cover;
+  }
+}
