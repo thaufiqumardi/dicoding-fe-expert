@@ -16,6 +16,7 @@
     display: block;
     font-size: 20px;
     color: var(--black);
+    background-color: var(--primary);
     border: unset;
     padding: 18px;
   }
@@ -71,5 +72,23 @@
   /* Card */
   .card img {
     height: 120px;
+  }
+
+  /* Restaurant detail */
+
+  #restaurant {
+    padding: 0;
+  }
+
+  .restaurant_detail_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 16px;
+  }
+
+  .restaurant_detail_image_container {
+    border: 1px dashed red;
+    height: 250px;
+    width: 100%;
   }
 }
