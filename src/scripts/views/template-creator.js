@@ -42,6 +42,8 @@ export const createRestaurantDetailTemplate = (data) => `
       <p class="restaurant_detail_rating"><i class="fa fa-star" aria-hidden="true"></i>Rating: ${data.rating}</p>
       <p class="restaurant_description">${data.description}</p>
       <div id="menus" class="menus_container"></div>
+      <p class="review_label">Reviews: </p>
+      <div class="customer_reviews_container"></div>
     </div>
   </div>
 `;
@@ -61,6 +63,18 @@ export const createMenuItemTemplate = (menu) => `
       <p class="menu_name">${menu.name}</p>
       <p class="menu_price">Rp${menu.price}</p>
       <p class="menu_desc">${menu.description}</p>
+    </div>
+  </div>
+`;
+
+export const createReviewsItemTemplate = (review) => `
+  <div class="card_review">
+    <div class="card_review_body">
+      <div class="card_review_header">
+        <p class="review_name">${review.name}</p>
+        <p class="review_date">Rp${review.date}</p>
+      </div>
+      <p class="review_desc">${review.review}</p>
     </div>
   </div>
 `;

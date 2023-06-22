@@ -270,6 +270,7 @@ main {
 
 .restaurant_description {
   padding: 10px 0;
+  letter-spacing: .3px;
 }
 
 .restaurant_detail_rating {
@@ -282,7 +283,7 @@ main {
 }
 
 .title_menu_category {
-  font-size: 14px;
+  font-size: 22px;
   font-family: var(--primary-font);
   font-weight: bold;
   padding-top: 16px;
@@ -331,6 +332,43 @@ main {
 .menu_desc {
   font-family: var(--secondary-font);
   font-size: 11px;
+  padding-bottom: 4px;
+}
+
+.customer_reviews_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding-top: 12px;
+}
+
+.card_review {
+  background-color: white;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.review_label {
+  font-size: 22px;
+  margin-top: 16px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+}
+
+.review_name {
+  font-weight: bold;
+  font-family: var(--secondary-font);
+}
+
+.review_date {
+  color: grey;
+  font-size: 11px;
+  padding: 4px 0;
+}
+
+.review_desc {
+  font-size: 14px;
+  font-family: var(--secondary-font);
 }
 
 
