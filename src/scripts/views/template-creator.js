@@ -27,8 +27,6 @@ export const createLikedButtonTemplate = () => `
   </button>
 `;
 
-const createMenuTemplate = (menu) => `<p>${menu}</p>`;
-
 export const createRestaurantDetailTemplate = (data) => `
   <div class="restaurant_detail_container">
     <div class="restaurant_detail_image_container">
@@ -36,10 +34,33 @@ export const createRestaurantDetailTemplate = (data) => `
     </div>
     <div class="restaurant_detail_body">
       <h2 class="restaurant_title">${data.name}</h2>
-      <a href="https://www.google.com/maps/search/${data.city}+${data.address}" _target="blank"><i class="fa fa-map-marker" aria-hidden="true"></i> ${data.city}, ${data.address}</a>
-      <p>Rating: ${data.rating}</p>
-      <p>${data.description}</p>
-      ${data.menus?.foods.map((item) => createMenuTemplate(item))}
+      <a class="restaurant_address" href="https://www.google.com/maps/search/${data.city}+${data.address}" _target="blank"><i class="fa fa-map-marker" aria-hidden="true"></i> ${data.city}, ${data.address}</a>
+      <div class="category">
+        <p class="categories_label">Categories:</p>
+        <div class="categories_container"></div>
+      </div>
+      <p class="restaurant_detail_rating"><i class="fa fa-star" aria-hidden="true"></i>Rating: ${data.rating}</p>
+      <p class="restaurant_description">${data.description}</p>
+      <div id="menus" class="menus_container"></div>
+    </div>
+  </div>
+`;
+
+export const createRestaurantCategoryTemplate = (category) => `<span>${category}</span>`;
+
+export const createMenuCategoryTemplate = (name) => `
+<div class="menu_category">
+  <p class="title_menu_category">${name}</p>
+  <div id="${name}" class="menu_card_container"></div>
+</div>`;
+
+export const createMenuItemTemplate = (menu) => `
+  <div class="card_menu">
+    <img src="${CONFIG.BASE_IMAGE_URL(menu.pictureId)}" alt="${menu.name}"  />
+    <div class="card_menu_body">
+      <p class="menu_name">${menu.name}</p>
+      <p class="menu_price">Rp${menu.price}</p>
+      <p class="menu_desc">${menu.description}</p>
     </div>
   </div>
 `;

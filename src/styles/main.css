@@ -206,7 +206,6 @@ main {
 
 /* Detail Page */
 #restaurant {
-  border: 1px dashed red;
   padding: 0 8em;
 }
 
@@ -217,7 +216,6 @@ main {
 }
 
 .restaurant_detail_image_container {
-  border: 1px dashed red;
   height: 650px;
   width: 100%;
 }
@@ -229,9 +227,112 @@ main {
 }
 
 .restaurant_detail_body {
-  border: 1px dashed blue;
   padding: 2em;
 }
+
+.restaurant_title {
+  font-family: var(--primary-font);
+}
+
+.restaurant_address {
+  font-family: var(--secondary-font);
+  text-decoration: none;
+  padding: 8px 0;
+  color: var(--black);
+}
+
+.category {
+  padding: 6px 0;
+}
+
+.categories_label {
+  font-size: 14px;
+  font-family: var(--primary-font);
+  font-weight: 700;
+}
+
+.categories_container {
+  display: grid;
+  max-width: 100%;
+  gap: .3em;
+  grid-template-columns: repeat(2, 100px);
+}
+
+.categories_container span {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2px;
+  font-size: 12px;
+  font-family: var(--secondary-font);
+  max-width: 100px;
+  border-radius: 3px;
+  color: white;
+}
+
+.restaurant_description {
+  padding: 10px 0;
+}
+
+.restaurant_detail_rating {
+  padding: 6px 0;
+}
+
+.restaurant_detail_rating i {
+  color: rgb(235, 169, 27);
+  margin-right: 4px;
+}
+
+.title_menu_category {
+  font-size: 14px;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  padding-top: 16px;
+  text-transform: capitalize;
+}
+
+.menu_card_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5em;
+  border-bottom: 1px dashed black;
+  padding: 16px 0;
+}
+
+.card_menu {
+  border-radius: 8px;
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+.card_menu img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card_menu_body {
+  padding: 6px 6px 0px 6px;
+}
+
+.menu_name {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu_price {
+  font-family: var(--secondary-font);
+  font-size: 12px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.menu_desc {
+  font-family: var(--secondary-font);
+  font-size: 11px;
+}
+
 
 /* Footer */
 footer {
