@@ -5,6 +5,7 @@ import RestarurantsSource from '../../data/restaurants-source';
 import CategoryRestaurantInitiator from '../../utils/category-initiator';
 import MenusRestaurantInitiator from '../../utils/menus-initiator';
 import ReviewsInitiator from '../../utils/reviews-initiator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
@@ -43,16 +44,10 @@ const Detail = {
       reviewsContainer: document.querySelector('.customer_reviews_container'),
       review: restaurant.customerReviews,
     });
-    // LikeButtonInitiator.init({
-    //   likeButtonContainer: document.querySelector('#likeButtonContainer'),
-    //   movie: {
-    //     id: movie.id,
-    //     title: movie.title,
-    //     overview: movie.overview,
-    //     backdrop_path: movie.backdrop_path,
-    //     vote_average: movie.vote_average,
-    //   },
-    // });
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      movie: {},
+    });
   },
 };
 

@@ -5,7 +5,7 @@ import Like from '../views/pages/like';
 const routes = {
   '/': Home, // default page
   '/detail/:id': Detail,
-  '/like': Like,
+  '/favourite': Like,
 };
 
 export default routes;
