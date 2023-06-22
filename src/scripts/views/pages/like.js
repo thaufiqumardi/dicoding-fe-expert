@@ -1,24 +1,24 @@
 import { createRestaurantItemTemplate } from '../template-creator';
-import FavoriteMovieIdb from '../../data/favourite-movie-idb';
+import FavoriteRestoIdb from '../../data/favourite-restos-idb';
 
 const Like = {
   async render() {
     return `
-    <div class="content">
-      <h2 class="content__heading">Your Favourite Restaurants</h2>
-      <div id="fav_restaurants" class="fav_restaurants_container">
- 
+    <section class="content" tabindex="0">
+      <div class="content__header">
+        <h2>Your Favourite Restaurants</h2>
       </div>
-    </div>
+      <div class="content__body" id="fav_restaurants"></div>
+    </section>
   `;
   },
 
   async afterRender() {
-    const movies = await FavoriteMovieIdb.getAllMovies();
-    const moviesContainer = document.querySelector('#movies');
+    const restaurants = await FavoriteRestoIdb.getAllRestos();
+    const restaurantsContainer = document.querySelector('#fav_restaurants');
 
-    movies.forEach((movie) => {
-      moviesContainer.innerHTML += createRestaurantItemTemplate(movie);
+    restaurants.forEach((restaurant) => {
+      restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
   },
 };

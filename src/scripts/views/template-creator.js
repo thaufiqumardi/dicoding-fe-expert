@@ -17,13 +17,13 @@ export const createRestaurantItemTemplate = (data) => `
   </div>`;
 
 export const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
-      <i class="fa fa-heart-o" aria-hidden="true"></i>
+  <button aria-label="like this resto" id="likeButton" class="like" tabindex="0">
+      <i class="fa fa-regular fa-heart" aria-hidden="true"></i>
   </button>`;
 
 export const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
-    <i class="fa fa-heart" aria-hidden="true"></i>
+  <button aria-label="unlike this resto" id="likeButton" class="like" tabindex="0">
+    <i class="fa fa-solid fa-heart" aria-hidden="true"></i>
   </button>
 `;
 

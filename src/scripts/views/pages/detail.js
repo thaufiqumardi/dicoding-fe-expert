@@ -46,7 +46,7 @@ const Detail = {
     });
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      movie: {},
+      restaurant,
     });
   },
 };
