@@ -11,6 +11,6 @@ self.addEventListener('push', () => {
   console.log('Service Worker: Pushed');
 });
 
-self.addEventListener('fetch', () => {
-  console.log('fetching data');
-});
+// self.addEventListener('fetch', () => {
+//   console.log('fetching data');
+// });
