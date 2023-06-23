@@ -185,6 +185,9 @@ main {
 .card__body h3 {
   margin-bottom: 6px;
   margin-top: 12px;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
   font-family: "Bodoni Moda", serif;
   font-weight: 600;
 }
@@ -217,6 +220,7 @@ main {
 }
 
 .restaurant_detail_image_container {
+  margin-top: 2em;
   height: 650px;
   width: 100%;
 }
@@ -238,8 +242,11 @@ main {
 .restaurant_address {
   font-family: var(--secondary-font);
   text-decoration: none;
+  display: inline-block;
+  min-height: 44px;
+  min-width: 44px;
   padding: 8px 0;
-  color: var(--black);
+  color: #444308;
 }
 
 .category {
@@ -272,10 +279,12 @@ main {
 .restaurant_description {
   padding: 10px 0;
   letter-spacing: .3px;
+  font-family: var(--secondary-font);
 }
 
 .restaurant_detail_rating {
   padding: 6px 0;
+  font-family: var(--primary-font);
 }
 
 .restaurant_detail_rating i {

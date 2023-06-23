@@ -38,4 +38,31 @@
     height: 130px;
     object-fit: cover;
   }
+
+  #restaurant {
+    padding: 0;
+  }
+
+  .restaurant_detail_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px 16px;
+  }
+
+  .restaurant_detail_body {
+    padding: 0px;
+  }
+
+  .restaurant_detail_image_container {
+    height: 250px;
+    width: 100%;
+  }
+
+  .menu_card_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .customer_reviews_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -29,20 +29,20 @@ export const createLikedButtonTemplate = () => `
 
 export const createRestaurantDetailTemplate = (data) => `
   <div class="restaurant_detail_container">
-    <div class="restaurant_detail_image_container">
+    <div class="restaurant_detail_image_container" tabindex="0">
       <img src="${CONFIG.BASE_IMAGE_URL(data.pictureId)}" alt="${data.name}"  />
     </div>
     <div class="restaurant_detail_body">
-      <h2 class="restaurant_title">${data.name}</h2>
-      <a class="restaurant_address" href="https://www.google.com/maps/search/${data.city}+${data.address}" _target="blank"><i class="fa fa-map-marker" aria-hidden="true"></i> ${data.city}, ${data.address}</a>
+      <h2 class="restaurant_title" tabindex="0">${data.name}</h2>
+      <a class="restaurant_address"  href="https://www.google.com/maps/search/${data.city}+${data.address}" _target="blank"><i class="fa fa-map-marker" aria-hidden="true"></i> ${data.city}, ${data.address}</a>
       <div class="category">
         <p class="categories_label">Categories:</p>
         <div class="categories_container"></div>
       </div>
-      <p class="restaurant_detail_rating"><i class="fa fa-star" aria-hidden="true"></i>Rating: ${data.rating}</p>
-      <p class="restaurant_description">${data.description}</p>
-      <div id="menus" class="menus_container"></div>
-      <p class="review_label">Reviews: </p>
+      <p tabindex="0" class="restaurant_detail_rating"><i class="fa fa-star" aria-hidden="true"></i>Rating: ${data.rating}</p>
+      <p class="restaurant_description" tabindex="0">${data.description}</p>
+      <div id="menus" class="menus_container" tabindex="0"></div>
+      <p class="review_label" tabindex="0">Reviews: </p>
       <div class="customer_reviews_container"></div>
     </div>
   </div>
