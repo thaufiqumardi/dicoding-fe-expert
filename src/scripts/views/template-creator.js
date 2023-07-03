@@ -16,6 +16,11 @@ export const createRestaurantItemTemplate = (data) => `
     </div>
   </div>`;
 
+export const createEmptyFavouriteResto = () => `
+  <div></div>
+  <div id="no_favourite_resto">You haven't add your favourite restaurants yet</div>
+  <div></div`;
+
 export const createLikeButtonTemplate = () => `
   <button aria-label="like this resto" id="likeButton" class="like" tabindex="0">
       <i class="fa fa-regular fa-heart" aria-hidden="true"></i>

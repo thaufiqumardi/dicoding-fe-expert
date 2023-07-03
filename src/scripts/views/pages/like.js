@@ -1,4 +1,4 @@
-import { createRestaurantItemTemplate } from '../template-creator';
+import { createEmptyFavouriteResto, createRestaurantItemTemplate } from '../template-creator';
 import FavoriteRestoIdb from '../../data/favourite-restos-idb';
 
 const Like = {
@@ -17,6 +17,10 @@ const Like = {
     const restaurants = await FavoriteRestoIdb.getAllRestos();
     const restaurantsContainer = document.querySelector('#fav_restaurants');
 
+    if (!restaurants.length) {
+      restaurantsContainer.innerHTML += createEmptyFavouriteResto();
+      return;
+    }
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });

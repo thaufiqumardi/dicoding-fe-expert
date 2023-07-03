@@ -401,6 +401,11 @@ footer {
   background-color: rgb(247, 82, 90);
 }
 
+#no_favourite_resto {
+  text-align: center;
+  align-items: center;
+  font-family: var(--secondary-font);
+}
 
 /*
   Like

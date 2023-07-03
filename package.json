@@ -9,7 +9,8 @@
     "test": "karma start",
     "serve": "http-server dist",
     "build-serve": "npm run build && npm run serve",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "Thaufiq Umardi <thaufiqumardii@gmail.com>",
