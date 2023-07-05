@@ -1,18 +1,12 @@
 const assert = require('assert');
 
-Feature('Favourite Resto');
+Feature('Remove Resto from Favourites');
 
 Before(({ I }) => {
-  I.amOnPage('/#/favourite');
-});
-
-Scenario('Showing empty favourite restos', ({ I }) => {
-  I.see("You haven't add your favourite restaurants yet", '#no_favourite_resto');
-});
-
-Scenario('Add one resto to Favourites', async ({ I }) => {
-  I.see("You haven't add your favourite restaurants yet", '#no_favourite_resto');
   I.amOnPage('/');
+});
+
+Scenario('Unliking one resto', async ({ I }) => {
   I.waitForVisible('.card');
   I.seeElement('.card');
   const sampleResto = locate('.card .card__body h3 a').first();
@@ -27,4 +21,11 @@ Scenario('Add one resto to Favourites', async ({ I }) => {
   const likedRestoTitle = await I.grabTextFrom('.card .card__body h3 a');
 
   assert.strictEqual(sampleRestoTitle, likedRestoTitle);
+
+  I.click(likedRestoTitle);
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/favourite');
+  I.see("You haven't add your favourite restaurants yet", '#no_favourite_resto');
 });
