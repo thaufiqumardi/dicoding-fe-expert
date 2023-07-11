@@ -10,6 +10,10 @@ const Home = {
   async render() {
     return `
       <div class="hero" tabindex="0">
+        <picture>
+          <source media="(max-width: 600px)" srcset="./images/hero-image-small.jpg">
+          <img class="hero__img" src="./images/hero-image-large.jpg" alt="hero images"/>
+        </picture>
         <div class="hero__inner">
           <h1 class="hero__title">Pasti Enak Resto</h1>
           <p class="hero__tagline">We serve Indonesia Cuisine so you can enjoy Beautiful Indonesia.</p>

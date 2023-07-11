@@ -1,9 +1,13 @@
-import CONFIG from '../globals/config';
+import API_ENDPOINT from '../globals/api-endpoint';
 
 export const createRestaurantItemTemplate = (data) => `
   <div class="card">
     <div class="card__image__container" tabindex="0">
-      <img src="${CONFIG.BASE_IMAGE_URL(data.pictureId)}" alt="${data.name}" />
+      <picture>
+        <source type="image/webp" srcset=${API_ENDPOINT.IMG.S(data.pictureId)}/>
+        <source type="image/jpeg" srcset=${API_ENDPOINT.IMG.S(data.pictureId)}/>
+        <img src="${API_ENDPOINT.IMG.S(data.pictureId)}" alt="${data.name}" />
+      </picture>
       <span>${data.city}</span>
     </div>
     <div class="card__body">
@@ -35,7 +39,11 @@ export const createLikedButtonTemplate = () => `
 export const createRestaurantDetailTemplate = (data) => `
   <div class="restaurant_detail_container">
     <div class="restaurant_detail_image_container" tabindex="0">
-      <img src="${CONFIG.BASE_IMAGE_URL(data.pictureId)}" alt="${data.name}"  />
+      <picture>
+      <source type="image/webp" srcset=${API_ENDPOINT.IMG.S(data.pictureId)}/>
+      <source type="image/jpeg" srcset=${API_ENDPOINT.IMG.S(data.pictureId)}/>
+        <img src="${API_ENDPOINT.IMG.L(data.pictureId)}" alt="${data.name}" />
+      </picture>
     </div>
     <div class="restaurant_detail_body">
       <h2 class="restaurant_title" tabindex="0">${data.name}</h2>
@@ -63,7 +71,11 @@ export const createMenuCategoryTemplate = (name) => `
 
 export const createMenuItemTemplate = (menu) => `
   <div class="card_menu">
-    <img src="${CONFIG.BASE_IMAGE_URL(menu.pictureId)}" alt="${menu.name}"  />
+    <picture>
+    <source type="image/webp" srcset=${API_ENDPOINT.IMG.S(menu.pictureId)}/>
+    <source type="image/jpeg" srcset=${API_ENDPOINT.IMG.S(menu.pictureId)}/>
+      <img src="${API_ENDPOINT.IMG.S(menu.pictureId)}" alt="${menu.name}" />
+    </picture>
     <div class="card_menu_body">
       <p class="menu_name">${menu.name}</p>
       <p class="menu_price">Rp${menu.price}</p>

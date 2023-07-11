@@ -56,15 +56,14 @@ header {
 .hero {
   position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
-  min-height: 580px;
-  min-width: 1000px;
   text-align: center;
-  background-image: url('../public/images/heros/hero-image_4.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: var(--primary);
+}
+
+.hero__img {
+  object-fit: cover;
+  height: 580px;
+  min-width: 80%;
 }
 
 .hero__inner {

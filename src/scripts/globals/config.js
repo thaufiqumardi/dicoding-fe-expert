@@ -1,6 +1,5 @@
 const CONFIG = {
   BASE_URL: 'https://restaurant-api.dicoding.dev',
-  BASE_IMAGE_URL: (id) => `https://restaurant-api.dicoding.dev/images/small/${id}`,
   DEFAULT_LANGUAGE: 'en-us',
   CACHE_NAME: `${new Date().toISOString()}-PastiEnak-V2`,
   DATABASE_NAME: 'pastienak-local-database',
