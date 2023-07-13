@@ -6,7 +6,7 @@ export const createRestaurantItemTemplate = (data) => `
       <picture>
         <source type="image/webp" srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
         <source type="image/jpeg" srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
-        <img src="${API_ENDPOINT.IMG.S(data.pictureId)}" alt="${data.name}" />
+        <img class="lazyload" src="${API_ENDPOINT.IMG.S(data.pictureId)}" alt="${data.name}" />
       </picture>
       <span>${data.city}</span>
     </div>
@@ -42,7 +42,7 @@ export const createRestaurantDetailTemplate = (data) => `
       <picture>
       <source type="image/webp" srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
       <source type="image/jpeg" srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
-        <img src="${API_ENDPOINT.IMG.L(data.pictureId)}" alt="${data.name}" />
+        <img class="lazyload" src="${API_ENDPOINT.IMG.L(data.pictureId)}" alt="${data.name}" />
       </picture>
     </div>
     <div class="restaurant_detail_body">
@@ -74,7 +74,7 @@ export const createMenuItemTemplate = (menu) => `
     <picture>
     <source type="image/webp" srcset="${API_ENDPOINT.IMG.S(menu.pictureId)}"/>
     <source type="image/jpeg" srcset="${API_ENDPOINT.IMG.S(menu.pictureId)}"/>
-      <img src="${API_ENDPOINT.IMG.S(menu.pictureId)}" alt="${menu.name}" />
+      <img class="lazyload" src="${API_ENDPOINT.IMG.S(menu.pictureId)}" alt="${menu.name}" />
     </picture>
     <div class="card_menu_body">
       <p class="menu_name">${menu.name}</p>
