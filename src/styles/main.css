@@ -63,7 +63,7 @@ header {
 .hero__img {
   object-fit: cover;
   height: 580px;
-  min-width: 80%;
+  width: 100%;
 }
 
 .hero__inner {

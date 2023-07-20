@@ -4,9 +4,9 @@ export const createRestaurantItemTemplate = (data) => `
   <div class="card">
     <div class="card__image__container" tabindex="0">
       <picture>
-        <source type="image/webp" srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
-        <source type="image/jpeg" srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
-        <img class="lazyload" src="${API_ENDPOINT.IMG.S(data.pictureId)}" alt="${data.name}" />
+        <source type="image/webp" data-srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
+        <source type="image/jpeg" data-srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
+        <img class="lazyload" data-src="${API_ENDPOINT.IMG.S(data.pictureId)}" alt="${data.name}" />
       </picture>
       <span>${data.city}</span>
     </div>
@@ -40,9 +40,9 @@ export const createRestaurantDetailTemplate = (data) => `
   <div class="restaurant_detail_container">
     <div class="restaurant_detail_image_container" tabindex="0">
       <picture>
-      <source type="image/webp" srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
-      <source type="image/jpeg" srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
-        <img class="lazyload" src="${API_ENDPOINT.IMG.L(data.pictureId)}" alt="${data.name}" />
+      <source type="image/webp" data-srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
+      <source type="image/jpeg" data-srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
+        <img class="lazyload" data-src="${API_ENDPOINT.IMG.L(data.pictureId)}" alt="${data.name}" />
       </picture>
     </div>
     <div class="restaurant_detail_body">
@@ -72,9 +72,9 @@ export const createMenuCategoryTemplate = (name) => `
 export const createMenuItemTemplate = (menu) => `
   <div class="card_menu">
     <picture>
-    <source type="image/webp" srcset="${API_ENDPOINT.IMG.S(menu.pictureId)}"/>
-    <source type="image/jpeg" srcset="${API_ENDPOINT.IMG.S(menu.pictureId)}"/>
-      <img class="lazyload" src="${API_ENDPOINT.IMG.S(menu.pictureId)}" alt="${menu.name}" />
+    <source type="image/webp" data-srcset="${API_ENDPOINT.IMG.S(menu.pictureId)}"/>
+    <source type="image/jpeg" data-srcset="${API_ENDPOINT.IMG.S(menu.pictureId)}"/>
+      <img class="lazyload" data-src="${API_ENDPOINT.IMG.S(menu.pictureId)}" alt="${menu.name}" />
     </picture>
     <div class="card_menu_body">
       <p class="menu_name">${menu.name}</p>
