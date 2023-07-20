@@ -40,8 +40,8 @@ export const createRestaurantDetailTemplate = (data) => `
   <div class="restaurant_detail_container">
     <div class="restaurant_detail_image_container" tabindex="0">
       <picture>
-      <source type="image/webp" data-srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
-      <source type="image/jpeg" data-srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
+        <source type="image/webp" data-srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
+        <source type="image/jpeg" data-srcset="${API_ENDPOINT.IMG.S(data.pictureId)}"/>
         <img class="lazyload" data-src="${API_ENDPOINT.IMG.L(data.pictureId)}" alt="${data.name}" />
       </picture>
     </div>
@@ -89,7 +89,7 @@ export const createReviewsItemTemplate = (review) => `
     <div class="card_review_body">
       <div class="card_review_header">
         <p class="review_name">${review.name}</p>
-        <p class="review_date">Rp${review.date}</p>
+        <p class="review_date">${review.date}</p>
       </div>
       <p class="review_desc">${review.review}</p>
     </div>
